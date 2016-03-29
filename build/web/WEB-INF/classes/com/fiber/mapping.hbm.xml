@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.fiber.Login" table="LOGIN">
+      <id name="id" column="ID" type="integer">
+          <generator class="increment"/>
+      </id>
+      <property name="uname" column="UNAME" type="string"></property>
+      <property name="pwd" column="PWD" type="string"></property>
+      <property name="address" column="ADDRESS" type="string"> </property>
+  </class>
+  <class name="com.fiber.ProductDetails" table="PRODUCTDETAILS">
+      <id name="pcode" column="PCODE" type="integer">
+          <generator class="increment"/>
+      </id>    
+      <property name="pname" column="PNAME" type="string"></property>
+      <property name="price" column="PRICE" type="integer"></property>
+  </class>
+  <class name="com.fiber.Order" table="ORDERDETAILS">
+      <id name="id" column="ID" type="integer">
+          <generator class="increment"/>
+      </id>
+      <property name="uname" column="UNAME" type="string"> </property>
+      <property name="orderPcode" column="PCODE" type="integer"> </property>
+      <property name="orderQty" column="QTY" type="integer"> </property>
+  </class>
+</hibernate-mapping>
